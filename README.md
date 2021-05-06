@@ -1,29 +1,24 @@
 # mobileapp
 
-package manager https://nodejs.org/en/download/
+package manager:
+https://nodejs.org/en/download/
 
-IDE
+IDE:
 https://code.visualstudio.com/download
 
-dependecy manager
+dependecy manager:
 https://classic.yarnpkg.com/en/docs/install#windows-stable
 
-JS tutorial in expo
+JS tutorial in expo:
 https://docs.expo.io/
 
-Using app on mobile
+Using app on mobile:
 Expo Go- on phone store
 
-Tutorial
+Tutorial:
 https://docs.expo.io/tutorial/planning/
 
-Github repo
-send me username and I'll add you to the project
-using git in VSCode
 
+using git in VSCode:
 https://code.visualstudio.com/docs/editor/github
 
-Summary
-VSCode for writing code
-Github for storing code
-Expo for running apps
