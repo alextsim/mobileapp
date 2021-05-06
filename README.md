@@ -1,24 +1,33 @@
-# mobileapp
+# Mobileapp
 
-package manager:
-https://nodejs.org/en/download/
+Framework: Expo (Framework on top of Reactive Native)
 
-IDE:
-https://code.visualstudio.com/download
-
-dependecy manager:
-https://classic.yarnpkg.com/en/docs/install#windows-stable
-
-JS tutorial in expo:
-https://docs.expo.io/
-
-Using app on mobile:
-Expo Go- on phone store
-
-Tutorial:
-https://docs.expo.io/tutorial/planning/
+Lanaguage: Typescript ( Javascript with type definitions added)
 
 
-using git in VSCode:
-https://code.visualstudio.com/docs/editor/github
+## Setup
+
+Use the following:
+
+package manager: [NodeJS](https://nodejs.org/en/download/)
+
+IDE: [VSCode](https://code.visualstudio.com/download)
+
+
+Tutorials:
+
+[expo] (https://docs.expo.io/)
+
+... add more when found
+
+
+## Usage
+
+Download expo go for mobile
+
+```bash
+cd (repo directory) eg. cd my-project
+expo start
+```
+
 
