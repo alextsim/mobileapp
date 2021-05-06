@@ -2,7 +2,7 @@
 
 Framework: Expo (Framework on top of Reactive Native)
 
-Lanaguage: Typescript ( Javascript with type definitions added)
+Lanaguage: Typescript (Javascript with type definitions added)
 
 
 ## Setup
@@ -25,10 +25,17 @@ Tutorials:
 
 ## Usage
 
+Live phone changes:
+
+
 Download expo go for mobile
 
+Live web changes:
+
+Run expo start in project directory
+
 ```bash
-cd (repo directory) eg. cd my-project
+cd (repo directory) eg. cd mobileapp/my-project
 expo start
 ```
 
