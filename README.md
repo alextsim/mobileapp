@@ -18,6 +18,8 @@ Tutorials:
 
 [expo] (https://docs.expo.io/)
 
+[Github & VSCode] (https://code.visualstudio.com/docs/editor/github)
+
 ... add more when found
 
 
