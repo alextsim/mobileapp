@@ -1,18 +1,27 @@
 import * as React from 'react';
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
+      <Text style={styles.title}>Something else</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabTwoScreen.tsx" />
+      <View style={styles.innerContainer}>
+        <Text
+          style={styles.text}
+          lightColor="rgba(0,0,0,0.8)"
+          darkColor="rgba(155,155,155,0.8)">
+            Some other shit
+        </Text>
+      </View>
     </View>
   );
 }
+
+
+//styles are dupicated this should be moved to its own file
 
 const styles = StyleSheet.create({
   container: {
@@ -28,5 +37,14 @@ const styles = StyleSheet.create({
     marginVertical: 30,
     height: 1,
     width: '80%',
+  },
+  innerContainer: {
+    alignItems: 'center',
+    marginHorizontal: 50,
+  },
+  text: {
+    fontSize: 17,
+    lineHeight: 24,
+    textAlign: 'center',
   },
 });
