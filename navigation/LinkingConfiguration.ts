@@ -12,14 +12,14 @@ export default {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          DJPad: {
             screens: {
-              TabOneScreen: 'one',
+              DJPadScreen: 'djpad',
             },
           },
-          TabTwo: {
+          Info: {
             screens: {
-              TabTwoScreen: 'two',
+              InfoScreen: 'info',
             },
           },
         },

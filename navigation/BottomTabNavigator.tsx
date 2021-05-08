@@ -10,9 +10,9 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
-import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import DJPadScreen from '../screens/DjPadScreen';
+import InfoScreen from '../screens/InfoScreen';
+import { BottomTabParamList, DJPadParamList, InfoParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -21,21 +21,15 @@ export default function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="DJPad"
       tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
       <BottomTab.Screen
-        name="TabOne"
-        component={TabOneNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
-        }}
+        name="DJPad"
+        component={DJPadNavigator}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoNavigator}
-        options={{
-          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
-        }}
+        name="Info"
+        component={InfoNavigator}
       />
     </BottomTab.Navigator>
   );
@@ -49,30 +43,30 @@ function TabBarIcon(props: { name: React.ComponentProps<typeof Ionicons>['name']
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
-const TabOneStack = createStackNavigator<TabOneParamList>();
+const DJPadStack = createStackNavigator<DJPadParamList>();
 
-function TabOneNavigator() {
+function DJPadNavigator() {
   return (
-    <TabOneStack.Navigator>
-      <TabOneStack.Screen
-        name="TabOneScreen"
-        component={TabOneScreen}
-        options={{ headerTitle: 'Tab One Title' }}
+    <DJPadStack.Navigator>
+      <DJPadStack.Screen
+        name="DJPadScreen"
+        component={DJPadScreen}
+        options={{ headerTitle: 'DJ App' }}
       />
-    </TabOneStack.Navigator>
+    </DJPadStack.Navigator>
   );
 }
 
-const TabTwoStack = createStackNavigator<TabTwoParamList>();
+const InfoStack = createStackNavigator<InfoParamList>();
 
-function TabTwoNavigator() {
+function InfoNavigator() {
   return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+    <InfoStack.Navigator>
+      <InfoStack.Screen
+        name="InfoScreen"
+        component={InfoScreen}
+        options={{ headerTitle: 'Info' }}
       />
-    </TabTwoStack.Navigator>
+    </InfoStack.Navigator>
   );
 }
