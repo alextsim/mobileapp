@@ -42,3 +42,6 @@ expo start
 ```
 
 
+## Notes
+
+If running on web browser shrink screen to estimated phone sizes as some web elements are rendering too small on a computer screen
