@@ -1,6 +1,6 @@
 // React imports
 import * as React from 'react';
-import {ImageBackground, StyleSheet, Dimensions, TouchableHighlight, Text } from 'react-native';
+import {ImageBackground, StyleSheet, Dimensions, TouchableOpacity, Text } from 'react-native';
 import { Audio } from 'expo-av';
 // project imports
 import { View } from '../components/Themed';
@@ -63,7 +63,7 @@ function stop(){
 
 export default function DJPadScreen() {
 
-  //TouchableHighlight: used as buttons, seem to require inner text object
+  //TouchableOpacity: used as buttons, seem to require inner text object
   
   return (
     //app container
@@ -77,39 +77,21 @@ export default function DJPadScreen() {
         </View>
          {/* COLUMN */}
         <View  style={styles.containerInner}>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(0)}>
-          <Text></Text>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(1)}>
-          <Text></Text>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(3)}>
-          <Text></Text>
-        </TouchableHighlight>
+        <TouchableOpacity style={styles.box} onPress={() => playSound(0)}/>
+        <TouchableOpacity style={styles.box} onPress={() => playSound(1)}/>
+        <TouchableOpacity style={styles.box} onPress={() => playSound(3)}/>
         </View>
          {/* COLUMN */}
-        <View  style={styles.containerInner}>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(0)}>
-          <Text></Text>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(1)}>
-          <Text></Text>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(3)}>
-          <Text></Text>
-        </TouchableHighlight>
+         <View  style={styles.containerInner}>
+        <TouchableOpacity style={styles.box} onPress={() => playSound(0)}/>
+        <TouchableOpacity style={styles.box} onPress={() => playSound(1)}/>
+        <TouchableOpacity style={styles.box} onPress={() => playSound(3)}/>
         </View>
-        {/* COLUMN */}
-        <View  style={styles.containerInner}>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(0)}>
-          <Text></Text>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(1)}>
-          <Text></Text>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(3)}>
-          <Text></Text>
-        </TouchableHighlight>
+         {/* COLUMN */}
+         <View  style={styles.containerInner}>
+        <TouchableOpacity style={styles.box} onPress={() => playSound(0)}/>
+        <TouchableOpacity style={styles.box} onPress={() => playSound(1)}/>
+        <TouchableOpacity style={styles.box} onPress={() => playSound(3)}/>
         </View>
         </ImageBackground>
     </View>
