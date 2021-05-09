@@ -49,8 +49,6 @@ async function playSound(index: number) {
 //todo: record screen audio, save
 //      playback audio (different screen)
 
-
-
 ///UI
 
 //main
@@ -61,7 +59,7 @@ export default function DJPadScreen() {
   return (
     //app container
     <View style={styles.container}>
-      {/* //background */}
+      {/* //BACKGROUND */}
     <ImageBackground source={require('../assets/images/bg.jpeg')}  style={styles.container}>
         {/* COLUMN */}
         <View  style={styles.containerInner}>
@@ -135,3 +133,4 @@ const styles = StyleSheet.create({
     opacity: 0.6,
   }
 });
+

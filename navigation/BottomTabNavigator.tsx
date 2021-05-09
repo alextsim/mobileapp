@@ -7,6 +7,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -26,10 +28,16 @@ export default function BottomTabNavigator() {
       <BottomTab.Screen
         name="DJPad"
         component={DJPadNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="music-circle" size={26} color="white" />,
+        }}
       />
       <BottomTab.Screen
         name="Playback"
         component={PlaybackNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <MaterialIcons name="my-library-music" size={26} color="white" />,
+        }}
       />
     </BottomTab.Navigator>
   );

@@ -20,7 +20,9 @@ Tutorials:
 
 [Github & VSCode] (https://code.visualstudio.com/docs/editor/github)
 
-... add more when found
+[Record and Playback option1] (https://www.smashingmagazine.com/2018/04/audio-video-recording-react-native-expo/)
+
+[Record and Playback option2] (https://hackernoon.com/recording-audio-in-react-native-ca1d3uc8)
 
 
 ## Usage
