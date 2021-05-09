@@ -37,11 +37,24 @@ async function playSound(index: number) {
   }
 }
 
+///THEMES
+
+//todo: change the styles dependending on variables
+
+
+
+
+///RECORDING AND PLAYBACK
+
+//todo: record screen audio, save
+//      playback audio (different screen)
+
+
+
 ///UI
 
 //main
 export default function DJPadScreen() {
-
 
   //TouchableHighlight: used as buttons, seem to require inner text object
   
@@ -92,6 +105,7 @@ export default function DJPadScreen() {
 }
 
 ////STYLING
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
