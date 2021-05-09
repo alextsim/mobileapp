@@ -51,7 +51,7 @@ function DJPadNavigator() {
       <DJPadStack.Screen
         name="DJPadScreen"
         component={DJPadScreen}
-        options={{ headerTitle: 'DJ App' }}
+        options={{ headerTitle: 'To remove header' }}
       />
     </DJPadStack.Navigator>
   );
@@ -65,7 +65,7 @@ function PlaybackNavigator() {
       <PlaybackStack.Screen
         name="PlaybackScreen"
         component={PlaybackScreen}
-        options={{ headerTitle: 'Playback' }}
+        options={{ headerTitle: 'To remove header' }}
       />
     </PlaybackStack.Navigator>
   );
