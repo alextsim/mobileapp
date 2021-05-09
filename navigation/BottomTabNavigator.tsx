@@ -11,8 +11,8 @@ import * as React from 'react';
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import DJPadScreen from '../screens/DjPadScreen';
-import InfoScreen from '../screens/InfoScreen';
-import { BottomTabParamList, DJPadParamList, InfoParamList } from '../types';
+import PlaybackScreen from '../screens/PlaybackScreen';
+import { BottomTabParamList, DJPadParamList, PlaybackParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -28,8 +28,8 @@ export default function BottomTabNavigator() {
         component={DJPadNavigator}
       />
       <BottomTab.Screen
-        name="Info"
-        component={InfoNavigator}
+        name="Playback"
+        component={PlaybackNavigator}
       />
     </BottomTab.Navigator>
   );
@@ -57,16 +57,16 @@ function DJPadNavigator() {
   );
 }
 
-const InfoStack = createStackNavigator<InfoParamList>();
+const PlaybackStack = createStackNavigator<PlaybackParamList>();
 
-function InfoNavigator() {
+function PlaybackNavigator() {
   return (
-    <InfoStack.Navigator>
-      <InfoStack.Screen
-        name="InfoScreen"
-        component={InfoScreen}
-        options={{ headerTitle: 'Info' }}
+    <PlaybackStack.Navigator>
+      <PlaybackStack.Screen
+        name="PlaybackScreen"
+        component={PlaybackScreen}
+        options={{ headerTitle: 'Playback' }}
       />
-    </InfoStack.Navigator>
+    </PlaybackStack.Navigator>
   );
 }

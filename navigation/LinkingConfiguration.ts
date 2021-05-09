@@ -17,9 +17,9 @@ export default {
               DJPadScreen: 'djpad',
             },
           },
-          Info: {
+          Playback: {
             screens: {
-              InfoScreen: 'info',
+              PlaybackScreen: 'Playback',
             },
           },
         },

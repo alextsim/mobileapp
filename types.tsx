@@ -10,13 +10,13 @@ export type RootStackParamList = {
 
 export type BottomTabParamList = {
   DJPad: undefined;
-  Info: undefined;
+  Playback: undefined;
 };
 
 export type DJPadParamList = {
   DJPadScreen: undefined;
 };
 
-export type InfoParamList = {
-  InfoScreen: undefined;
+export type PlaybackParamList = {
+  PlaybackScreen: undefined;
 };
