@@ -2,8 +2,6 @@
  * Learn more about createBottomTabNavigator:
  * https://reactnavigation.org/docs/bottom-tab-navigator
  */
-
-import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
@@ -35,6 +33,8 @@ export default function BottomTabNavigator() {
       <BottomTab.Screen
         name="Playback"
         component={PlaybackNavigator}
+        //You can explore the built-in icon families and icons on the web at:
+        //https://icons.expo.fyi/
         options={{
           tabBarIcon: ({ color }) => <MaterialIcons name="my-library-music" size={26} color="white" />,
         }}
@@ -43,23 +43,16 @@ export default function BottomTabNavigator() {
   );
 }
 
-// You can explore the built-in icon families and icons on the web at:
-// https://icons.expo.fyi/
-function TabBarIcon(props: { name: React.ComponentProps<typeof Ionicons>['name']; color: string }) {
-  return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
-}
-
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
 const DJPadStack = createStackNavigator<DJPadParamList>();
 
 function DJPadNavigator() {
   return (
-    <DJPadStack.Navigator>
+    <DJPadStack.Navigator screenOptions={{ headerShown: false}}>
       <DJPadStack.Screen
         name="DJPadScreen"
         component={DJPadScreen}
-        options={{ headerTitle: 'To remove header' }}
       />
     </DJPadStack.Navigator>
   );
@@ -69,11 +62,10 @@ const PlaybackStack = createStackNavigator<PlaybackParamList>();
 
 function PlaybackNavigator() {
   return (
-    <PlaybackStack.Navigator>
+    <PlaybackStack.Navigator screenOptions={{ headerShown: false}}>
       <PlaybackStack.Screen
         name="PlaybackScreen"
         component={PlaybackScreen}
-        options={{ headerTitle: 'To remove header' }}
       />
     </PlaybackStack.Navigator>
   );

@@ -4,6 +4,7 @@ import {ImageBackground, StyleSheet, Dimensions, TouchableHighlight, Text } from
 import { Audio } from 'expo-av';
 // project imports
 import { View } from '../components/Themed';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 ///////DATA
@@ -47,11 +48,19 @@ async function playSound(index: number) {
 ///RECORDING AND PLAYBACK
 
 //todo: record screen audio, save
-//      playback audio (different screen)
+//these methods will be large, will be better to seperate into another file
+function play(){
 
-///UI
+}
 
-//main
+function stop(){
+
+}
+
+
+
+///DJPadScreen
+
 export default function DJPadScreen() {
 
   //TouchableHighlight: used as buttons, seem to require inner text object
@@ -61,31 +70,36 @@ export default function DJPadScreen() {
     <View style={styles.container}>
       {/* //BACKGROUND */}
     <ImageBackground source={require('../assets/images/bg.jpeg')}  style={styles.container}>
+        {/* PLAYERCONTROLS */}
+        <View  style={styles.containerControls}>
+        <MaterialCommunityIcons style={styles.containerControls} name="play" size={50} color="white" onPress={play}/>
+        <MaterialCommunityIcons style={styles.containerControls} name="stop" size={50} color="white" onPress={stop}/>
+        </View>
+         {/* COLUMN */}
+        <View  style={styles.containerInner}>
+        <TouchableHighlight style={styles.box} onPress={() => playSound(0)}>
+          <Text></Text>
+        </TouchableHighlight>
+        <TouchableHighlight style={styles.box} onPress={() => playSound(1)}>
+          <Text></Text>
+        </TouchableHighlight>
+        <TouchableHighlight style={styles.box} onPress={() => playSound(3)}>
+          <Text></Text>
+        </TouchableHighlight>
+        </View>
+         {/* COLUMN */}
+        <View  style={styles.containerInner}>
+        <TouchableHighlight style={styles.box} onPress={() => playSound(0)}>
+          <Text></Text>
+        </TouchableHighlight>
+        <TouchableHighlight style={styles.box} onPress={() => playSound(1)}>
+          <Text></Text>
+        </TouchableHighlight>
+        <TouchableHighlight style={styles.box} onPress={() => playSound(3)}>
+          <Text></Text>
+        </TouchableHighlight>
+        </View>
         {/* COLUMN */}
-        <View  style={styles.containerInner}>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(0)}>
-          <Text></Text>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(1)}>
-          <Text></Text>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(3)}>
-          <Text></Text>
-        </TouchableHighlight>
-        </View>
-         {/* COLUMN */}
-        <View  style={styles.containerInner}>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(0)}>
-          <Text></Text>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(1)}>
-          <Text></Text>
-        </TouchableHighlight>
-        <TouchableHighlight style={styles.box} onPress={() => playSound(3)}>
-          <Text></Text>
-        </TouchableHighlight>
-        </View>
-         {/* COLUMN */}
         <View  style={styles.containerInner}>
         <TouchableHighlight style={styles.box} onPress={() => playSound(0)}>
           <Text></Text>
@@ -110,25 +124,26 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     flexDirection: 'row',
     justifyContent: 'center',
-    alignItems: 'center'
   },
     containerInner: {
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    justifyContent: 'center',
+  },
+  containerControls: {
+    backgroundColor: 'transparent',
+    justifyContent: 'center',
+    marginBottom:15, 
   },
   bg: {
     flex: 1,
     resizeMode: "cover",
     justifyContent: "center"
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
   box: {
-    width: DeviceWidth*0.1, 
-    height: DeviceWidth*0.1, 
-    marginBottom:10, 
-    marginLeft:10, 
+    width: DeviceWidth*0.2, 
+    height: DeviceWidth*0.2, 
+    marginBottom:5, 
+    marginLeft:5, 
     backgroundColor: 'black', 
     opacity: 0.6,
   }
